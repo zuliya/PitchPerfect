@@ -31,7 +31,7 @@
                                 <rect key="frame" x="110" y="256" width="155" height="155"/>
                                 <state key="normal" image="RecordButton"/>
                                 <connections>
-                                    <action selector="RecordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TLc-2w-s9a"/>
+                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XeL-yf-9Wc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dr5-GC-7Mc">
@@ -58,9 +58,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="ww1-zc-lzp"/>
                     <connections>
-                        <outlet property="recordButton" destination="ZO3-zm-BKk" id="cpg-pl-Z4x"/>
-                        <outlet property="recordingLabel" destination="8Fr-Ag-Ria" id="mzr-7I-4fE"/>
-                        <outlet property="stopRecordingButton" destination="Dr5-GC-7Mc" id="WDs-7s-GxA"/>
+                        <outlet property="recordButton" destination="ZO3-zm-BKk" id="2uH-3R-x71"/>
+                        <outlet property="recordingLabel" destination="8Fr-Ag-Ria" id="j2k-3E-lCC"/>
+                        <outlet property="stopRecordingButton" destination="Dr5-GC-7Mc" id="5ZC-Zu-7QH"/>
                         <segue destination="low-ZW-ipr" kind="show" identifier="stopRecording" id="pau-bk-V3i"/>
                     </connections>
                 </viewController>
