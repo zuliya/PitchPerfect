@@ -31,8 +31,9 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-        print("View will appear is being called")
+        //print("View will appear is being called")
     }
+    
     
     @IBAction func recordAudio(_ sender: UIButton) {
         recordingLabel.text = "Recording in progress"
@@ -49,18 +50,17 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         print(filePath as Any)
         
         let session = AVAudioSession.sharedInstance()
-        
         try! session.setCategory(AVAudioSessionCategoryPlayAndRecord, with:AVAudioSessionCategoryOptions.defaultToSpeaker)
         
         try! audioRecorder = AVAudioRecorder(url: filePath!, settings: [:])
-        //     audioRecorder.delegate = self
+        audioRecorder.delegate = self
         audioRecorder.isMeteringEnabled = true
         audioRecorder.prepareToRecord()
         audioRecorder.record()
     }
     
     // taking care of Stop recording
-    @IBAction func stopRecording(_ sender: Any) {
+    @IBAction func stopRecording(_ sender: AnyObject) {
         stopRecordingButton.isEnabled = false
         recordButton.isEnabled = true
         recordingLabel.text = "Tap to Record"
@@ -68,9 +68,23 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(false)
     }
-}
+    
 
-//func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-//    print("finished recording")
-//}
+func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
+    if flag{
+        performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)
+    }
+    else{
+        print("recording was not succesful")
+    }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier=="stopRecording" {
+            let playSoundsVC = segue.destination as! playSoundViewController
+            let recordedAudioURL = sender as! URL
+            playSoundsVC.recordedAudioURL = recordedAudioURL
+        }
+    }
+    
+}
 
