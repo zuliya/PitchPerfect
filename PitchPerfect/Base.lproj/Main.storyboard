@@ -135,7 +135,7 @@
                                                             <action selector="playSoundForButton:" destination="low-ZW-ipr" eventType="touchUpInside" id="Iw2-Ry-Svl"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9y6-r5-ozr" userLabel="Reverb Button">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9y6-r5-ozr" userLabel="Reverb Button">
                                                         <rect key="frame" x="171.5" y="0.0" width="171.5" height="151"/>
                                                         <state key="normal" image="Reverb"/>
                                                         <connections>
