@@ -69,10 +69,10 @@
             </objects>
             <point key="canvasLocation" x="1544.8" y="145.27736131934034"/>
         </scene>
-        <!--Play Sound View Controller-->
+        <!--Play Sounds View Controller-->
         <scene sceneID="Fsv-U5-dkL">
             <objects>
-                <viewController id="low-ZW-ipr" customClass="playSoundViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="low-ZW-ipr" customClass="PlaySoundsViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SQo-t3-GM1"/>
                         <viewControllerLayoutGuide type="bottom" id="bE8-GI-Oda"/>
