@@ -57,8 +57,19 @@ class PlaySoundsViewController: UIViewController {
         stopAudio()
     }
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         setupAudio()
+        
+        // MARK: So the images are scaled to fit (does not work lol)
+        snailButton.imageView?.contentMode = .scaleAspectFit
+        rabbitButton.imageView?.contentMode = .scaleAspectFit
+        chipmunkButton.imageView?.contentMode = .scaleAspectFit
+        vaderButton.imageView?.contentMode = .scaleAspectFit
+        echoButton.imageView?.contentMode = .scaleAspectFit
+        reverbButton.imageView?.contentMode = .scaleAspectFit
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
